@@ -17,7 +17,7 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./service-worker.js?v=3', { scope: './' }).catch(function (e) { console.warn('Service worker registration failed', e); });
   });
 }
-</script><script src="./msal-browser.min.js"></script><script id="sharepoint-erillispuhaltimet">
+</script><script src="https://alcdn.msauth.net/browser/2.35.0/js/msal-browser.min.js"></script><script id="sharepoint-erillispuhaltimet">
 (async()=>{
  const CFG={clientId:'7462a6f3-753e-47fa-8236-2ef9ece5be08',tenantId:'cbe04ec8-8650-4462-80cb-be2e15da4a08',redirectUri:location.origin+location.pathname,hostname:'huoltokoplafi.sharepoint.com',sitePath:'/sites/HuoltokoplaOy',folderPath:'General/Huoltokopla Oy/3 Huoltotyöt/Vuosihuollot/Kohteiden raportit/Sovellusraportit erillispuhaltimet',scopes:['User.Read','Sites.Read.All','Files.ReadWrite.All']};
  const $=id=>document.getElementById(id),enc=p=>p.split('/').filter(Boolean).map(encodeURIComponent).join('/');let account=null,siteId=null,driveId=null;
